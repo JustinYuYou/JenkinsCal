@@ -1,6 +1,10 @@
 import java.util.UUID;
 
+<<<<<<< HEAD
 //test test
+=======
+//Made some changes for Jenkin trigger
+>>>>>>> 7f8a81481d3b7681bd706401be8a59896e529f91
 class Calculator {
 
     Calculator(){
