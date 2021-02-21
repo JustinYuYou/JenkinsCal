@@ -67,9 +67,12 @@ pipeline {
     }
 
     post {
-        mail to: 'chentingyu0117@gmail.com',
-        subject: "Failed Pipeline: ${currentBuild.fullDisplayName}",
-        body: "Something is wrong with ${env.BUILD_URL}"
+        failure {
+
+            mail to: 'chentingyu0117@gmail.com',
+                 subject: "Failed Pipeline: ${currentBuild.fullDisplayName}",
+                 body: "Something is wrong with ${env.BUILD_URL}"
+        }
     }
     environment {
         registry = "chentingyu0117/calculator"
